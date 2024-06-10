@@ -109,7 +109,7 @@ const TaskManagerButtons = () => {
         <></>
       )}
 
-      {isAdmin() && path.includes("/list") && (
+      {path.includes("/list") && (
         <FunctionButton
           name={path.includes("/old") ? "Tasks" : "History"}
           method={() => {
@@ -122,7 +122,7 @@ const TaskManagerButtons = () => {
         />
       )}
 
-      {isAdmin() && path.includes("/manage") && (
+      {path.includes("/manage") && (
         <FunctionButton
           name={path.includes("/users") ? "Departments" : "Users"}
           method={() => {

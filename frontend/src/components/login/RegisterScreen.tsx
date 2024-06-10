@@ -18,7 +18,7 @@ const Content = (props: { type: "signup" | "login"; requestId?: string }) => {
   );
 };
 
-const SignupScreen = (props: {
+const RegisterScreen = (props: {
   type: "signup" | "login";
   requestId?: string;
 }) => {
@@ -29,4 +29,4 @@ const SignupScreen = (props: {
   );
 };
 
-export default SignupScreen;
+export default RegisterScreen;

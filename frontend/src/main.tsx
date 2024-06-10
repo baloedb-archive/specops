@@ -11,15 +11,13 @@ import TaskTest from "./components/test/TaskTest.tsx";
 import ProtectedRoute from "./utils/ProtectedRoute.tsx";
 import { isAdmin, isUser } from "./services/api-client.ts";
 import OrganizationManager from "./components/manage-organization/OrganizationManager.tsx";
+import Signup from "./Signup.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<SignupScreen type="login" />} />
-      <Route
-        path="/signup/:requestId"
-        element={<SignupScreen type="signup" />}
-      />
+      <Route path="/signup/:requestId" element={<Signup />} />
       <Route path="/login" element={<SignupScreen type="login" />} />
       <Route element={<ProtectedRoute authenticate={isAdmin} />}>
         <Route path="/testing" element={<App />} />

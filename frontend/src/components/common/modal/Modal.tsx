@@ -5,14 +5,14 @@ import ModalSubmit from "./ModalSubmit";
 export default function Modal(props: {
   name: string;
   edit: boolean;
-  close: () => void;
+  close: (e?: React.MouseEvent) => void;
   submit: () => void;
   form: React.ReactNode;
 }) {
   const handleSubmit = (e: React.MouseEvent) => {
     e.preventDefault();
     props.submit();
-    props.close();
+    props.close(e);
   };
 
   return (

@@ -44,15 +44,17 @@ const UserModal = (props: {
             : `${props.type === "create" ? "Create User" : "Edit User"}`
         }
         edit={false}
-        close={() => {
-          if (props.type === "create") {
+        close={(e) => {
+          if (
+            props.type === "create" &&
+            e?.currentTarget.innerHTML === "Create User"
+          ) {
             if (!showLink) setShowLink(true);
             if (showLink) props.close();
           } else {
             props.close();
           }
         }}
-        deactivate={() => {}}
         submit={async () => {
           if (props.id) {
             submitUser(props.type, name, role, department, props.id);
