@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api = "https://specops-latest.onrender.com";
+const api = "https://specops-backend.onrender.com";
 export const web = "https://specops-frontend.onrender.com";
 
 export const post = (resource: string, body: object) => {
